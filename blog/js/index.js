@@ -19,12 +19,6 @@ const blogPosts = document.querySelector(".blog__post");
 
 blogPosts.innerHTML = data
   .map((p) =>
-    postCard(
-      p.images[0],
-      p.title,
-      p.post_date,
-      p.introduction.slice(0, 200) + "...",
-      p.file_name
-    )
+    postCard(p.images[0], p.title, p.post_date, p.preview, p.file_name)
   )
   .join("");
